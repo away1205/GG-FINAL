@@ -57,7 +57,7 @@ function CommentList() {
             <AbsoluteCenter
               bg={'gray.900'}
               px={4}
-              fontSize={['xs', 'xs', 'xs', 'md']}
+              fontSize={['xs', 'xs', 'xs', 'sm']}
             >
               Start comment
             </AbsoluteCenter>
