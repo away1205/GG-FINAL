@@ -2,6 +2,8 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
+const DATABASE_URL = 'https://tokopedia-play-clone.cyclic.app/';
+
 function useComment() {
   const { id } = useParams();
   const [commentDatabase, setCommentDatabase] = useState([]);
@@ -13,7 +15,7 @@ function useComment() {
       async function fecthCommentList() {
         try {
           setIsLoading(true);
-          const res = await axios.get(`http://localhost:3000/${id}/comment`);
+          const res = await axios.get(`${DATABASE_URL}/${id}/comment`);
           setCommentDatabase(res.data?.list_comments);
         } catch (error) {
           console.log(error);
