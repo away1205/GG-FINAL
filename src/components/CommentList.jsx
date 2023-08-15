@@ -71,7 +71,7 @@ function CommentList() {
       </Box>
 
       <Box my={'auto'} pt={4}>
-        <CommentForm onCurComments={setCurComments} />
+        <CommentForm />
       </Box>
     </Grid>
   );

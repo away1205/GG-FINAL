@@ -14,6 +14,7 @@ function useComment() {
     function () {
       async function fecthCommentList() {
         try {
+          setComments([]);
           setIsLoading(true);
           const res = await axios.get(`${DATABASE_URL}/${id}/comment`);
           setCommentDatabase(res.data?.list_comments);
