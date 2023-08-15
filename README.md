@@ -2,7 +2,7 @@
 
 ## Helloo
 
-Welcome to the documentation of the frontend code for the **Tokopedia Play Clone** project. This documentation aims to provide you with a comprehensive understanding of the project's frontend structure, technologies used, integration details, architecture, API communication, folder structure, components, and more.
+Welcome to the documentation of the frontend code for the **Tokopedia Play Clone** project.
 
 ## Table of Contents
 
