@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-const DATABASE_URL = 'https://tokopedia-play-clone.cyclic.app/';
+const DATABASE_URL = import.meta.env.VITE_DATABASE;
 
 function useVideoDetail(specificData = '') {
   if (typeof specificData !== 'string')

@@ -3,6 +3,8 @@ import { useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
+const DATABASE_URL = import.meta.env.VITE_DATABASE;
+
 function CommentForm({ onCurComments }) {
   const [comment, setComment] = useState('');
   const [username, setUsername] = useState('');
@@ -20,15 +22,11 @@ function CommentForm({ onCurComments }) {
     ev.preventDefault();
 
     try {
-      await axios.post(
-        `http://localhost:3000/${id}/comment`,
-        newComment.toString(),
-        {
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-          },
-        }
-      );
+      await axios.post(`${DATABASE_URL}/${id}/comment`, newComment.toString(), {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+      });
       onCurComments((dataComment) => [
         ...dataComment,
         { _id: Date.now(), username, comment, timestamp: Date.now() },

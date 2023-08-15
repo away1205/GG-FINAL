@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-const DATABASE_URL = 'https://tokopedia-play-clone.cyclic.app/';
+const DATABASE_URL = import.meta.env.VITE_DATABASE;
 
 function useVideo() {
   const [videos, setVideos] = useState([]);
