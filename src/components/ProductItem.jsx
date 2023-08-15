@@ -9,10 +9,7 @@ import {
 } from '@chakra-ui/react';
 
 function ProductItem({ price, title, url }) {
-  const currency = new Intl.NumberFormat('id', {
-    style: 'currency',
-    currency: 'IDR',
-  }).format(price);
+  const currency = new Intl.NumberFormat('int', {}).format(price);
 
   return (
     <Card
@@ -26,7 +23,7 @@ function ProductItem({ price, title, url }) {
     >
       <Image
         objectFit='cover'
-        maxW={{ base: '100%', sm: '150px' }}
+        maxW={{ base: '50px', sm: '150px' }}
         src='https://picsum.photos/seed/picsum/200/150'
         alt={title}
         color={'gray.300'}
@@ -39,7 +36,7 @@ function ProductItem({ price, title, url }) {
               {title}
             </Heading>
             <Text color={'green.300'} fontSize={'sm'}>
-              {currency}
+              {`IDR ${currency}`}
             </Text>
           </CardBody>
         </LinkOverlay>
