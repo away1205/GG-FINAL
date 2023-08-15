@@ -14,7 +14,6 @@ import useComment from '../hooks/useComment';
 function CommentList() {
   const { commentDatabase, comments, isLoading } = useComment();
   const [curComments, setCurComments] = useState([]);
-  console.log(curComments);
 
   const commentSectionRef = useRef();
 
