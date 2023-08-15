@@ -15,7 +15,7 @@ Welcome to the documentation of the frontend code for the **Tokopedia Play Clone
 7. [Folder Structure](#folder-structure)
 8. [Types of Objects](#types-of-objects)
 9. [Important Modules and Routes](#important-modules-and-routes)
-10. [Testing Approach](#testing-approach)
+10. [Bonus](#Bonus)
 11. [Frequently Asked Questions](#frequently-asked-questions)
 
 ## 2. Product Overview
@@ -119,15 +119,27 @@ src/
 - **Homepage**: The landing page of the application that displays a list of videos.
 - **VideoDetailPage**: The page that displays video details, comments, products, and the video player.
 
-## 10. Testing Approach
+## 10. Bonus
 
-The project follows a testing approach that includes:
+**Server-Sent Events (SSE) - Comment Section:**
 
-- **Unit Tests**: Testing individual components and hooks in isolation.
-- **Integration Tests**: Testing the interaction between components and context providers.
-- **End-to-End (E2E) Tests**: Simulating user interactions across multiple components and views.
+The comment section of the Tokopedia Play Clone project leverages Server-Sent Events (SSE) to provide real-time updates to users. SSE is a technology that enables the server to push updates to the client over a single HTTP connection, facilitating the dynamic display of new comments without requiring constant polling from the client.
 
-Tests are written using testing libraries such as Jest and React Testing Library.
+1. **Functionality:** When a user posts a new comment, the server broadcasts this new comment to all clients viewing the same video in real-time.
+
+2. **Implementation:** The `useComment` hook establishes an SSE connection to the server's SSE endpoint specific to the video being viewed. When a new comment is posted for that video, the server emits an event through SSE, which triggers an update in the `CommentList` component. This update dynamically adds the new comment to the UI without requiring manual refreshing.
+
+3. **Benefits:** SSE significantly reduces unnecessary network traffic and server load compared to traditional polling methods. It ensures a seamless and engaging user experience by instantly reflecting changes in the comment section to all viewers of the video.
+
+**Real-time Search Feature:**
+
+The search feature of the Tokopedia Play Clone project offers real-time filtering of video content based on user input. As users type in the search bar, the application dynamically filters and displays videos that match the search query in real-time.
+
+1. **Functionality:** As users type in the search bar, the frontend instantly filters and displays videos whose titles include the typed query.
+
+2. **Implementation:** The `useVideoContext` hook provides access to the searchedVideo state, which holds the user's search query. As the user types, the searchedVideo state is updated, triggering a re-render of the `VideoList` component. This component uses the `listSearchedVideos` array to display only the videos that match the search query.
+
+3. **Benefits:** This real-time search feature enhances user interaction by providing instant feedback on the search results without the need to submit a form or navigate to a different page. It streamlines the user experience and aids users in finding relevant content quickly.
 
 ## 11. Frequently Asked Questions
 

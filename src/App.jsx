@@ -15,7 +15,6 @@ function App() {
           <Route index element={<Homepage />} />
           <Route path='search' element={<Homepage />} />
           <Route path='video/:id' element={<VideoDetailPage />} />
-          <Route path='events' element={<ServerEventTest />} />
           <Route path='*' element={<p>No page found</p>} />
         </Routes>
       </BrowserRouter>
