@@ -26,7 +26,7 @@ function CommentList() {
 
   useEffect(
     function () {
-      setCurComments([...comments]);
+      setCurComments((prevComment) => [...prevComment, ...comments]);
     },
     [comments]
   );

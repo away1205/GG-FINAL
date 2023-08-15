@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 
 const DATABASE_URL = import.meta.env.VITE_DATABASE;
 
-function CommentForm({ onCurComments }) {
+function CommentForm() {
   const [comment, setComment] = useState('');
   const [username, setUsername] = useState('');
   const { id } = useParams();
@@ -27,10 +27,6 @@ function CommentForm({ onCurComments }) {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
       });
-      onCurComments((dataComment) => [
-        ...dataComment,
-        { _id: Date.now(), username, comment, timestamp: Date.now() },
-      ]);
 
       setComment('');
     } catch (err) {

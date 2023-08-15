@@ -30,10 +30,8 @@ function useComment() {
   );
 
   useEffect(() => {
-    // Create a new EventSource connection to the SSE endpoint
     const eventSource = new EventSource(`${DATABASE_URL}/${id}/comment/sse`);
 
-    // Handle SSE updates from the server
     eventSource.onmessage = (event) => {
       const sseData = JSON.parse(event.data);
       if (sseData.newComment.video === id) {
@@ -41,12 +39,10 @@ function useComment() {
       }
     };
 
-    // Handle SSE errors
     eventSource.onerror = (error) => {
       console.error('SSE Error:', error);
     };
 
-    // Close the EventSource connection when the component is unmounted
     return () => {
       eventSource.close();
     };
