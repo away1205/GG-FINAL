@@ -4,7 +4,6 @@ import Homepage from './pages/Homepage';
 import VideoDetailPage from './pages/VideoDetailPage';
 import { VideoProvider } from './contexts/VideoContext';
 import ScrollToTop from './components/ScrollToTop';
-import ServerEventTest from './pages/ServerEventTest';
 
 function App() {
   return (
