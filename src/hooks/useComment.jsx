@@ -31,9 +31,7 @@ function useComment() {
 
   useEffect(() => {
     // Create a new EventSource connection to the SSE endpoint
-    const eventSource = new EventSource(
-      `http://localhost:3000/${id}/comment/sse`
-    );
+    const eventSource = new EventSource(`${DATABASE_URL}/${id}/comment/sse`);
 
     // Handle SSE updates from the server
     eventSource.onmessage = (event) => {
