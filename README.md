@@ -2,7 +2,7 @@
 
 ## Helloo
 
-Welcome to the documentation of the frontend code for the **Tokopedia Play Clone** project.
+Welcome to the documentation of the frontend code for the **Tokopedia Play** project.
 
 ## Table of Contents
 
@@ -20,7 +20,7 @@ Welcome to the documentation of the frontend code for the **Tokopedia Play Clone
 
 ## 2. Product Overview
 
-The **Tokopedia Play Clone** is a web application designed to replicate the core functionalities of the Tokopedia Play platform. It enables users to watch videos, view video details, post comments, and interact with related products. This platform serves as a hub for users interested in watching videos and exploring related products.
+The **Tokopedia Play** is a web application designed to replicate the core functionalities of the Tokopedia Play platform. It enables users to watch videos, view video details, post comments, and interact with related products. This platform serves as a hub for users interested in watching videos and exploring related products.
 
 ## 3. Technologies Used
 
@@ -33,7 +33,7 @@ The **Tokopedia Play Clone** is a web application designed to replicate the core
 
 ## 4. Integration
 
-The frontend of the **Tokopedia Play Clone** runs within users' web browsers. It communicates with the backend server using API requests. The frontend is integrated with the backend through HTTP API endpoints for fetching video details, comments, and products, as well as posting new comments.
+The frontend of the **Tokopedia Play** runs within users' web browsers. It communicates with the backend server using API requests. The frontend is integrated with the backend through HTTP API endpoints for fetching video details, comments, and products, as well as posting new comments.
 
 ## 5. Application Architecture
 
@@ -69,7 +69,7 @@ The application architecture follows a modern and modular design, utilizing Reac
 
 7. The global state for videos is managed by the `VideoContext`, accessible by various components throughout the application.
 
-**In summary, the architecture combines components, hooks, contexts, routing, and libraries to create a dynamic and interactive frontend for the Tokopedia Play Clone project.**
+**In summary, the architecture combines components, hooks, contexts, routing, and libraries to create a dynamic and interactive frontend for the Tokopedia Play  project.**
 
 ## 6. API and Backend Communication
 
@@ -123,7 +123,7 @@ src/
 
 **Server-Sent Events (SSE) - Comment Section:**
 
-The comment section of the Tokopedia Play Clone project leverages Server-Sent Events (SSE) to provide real-time updates to users. SSE is a technology that enables the server to push updates to the client over a single HTTP connection, facilitating the dynamic display of new comments without requiring constant polling from the client.
+The comment section of the Tokopedia Play  project leverages Server-Sent Events (SSE) to provide real-time updates to users. SSE is a technology that enables the server to push updates to the client over a single HTTP connection, facilitating the dynamic display of new comments without requiring constant polling from the client.
 
 1. **Functionality:** When a user posts a new comment, the server broadcasts this new comment to all clients viewing the same video in real-time.
 
@@ -133,7 +133,7 @@ The comment section of the Tokopedia Play Clone project leverages Server-Sent Ev
 
 **Real-time Search Feature:**
 
-The search feature of the Tokopedia Play Clone project offers real-time filtering of video content based on user input. As users type in the search bar, the application dynamically filters and displays videos that match the search query in real-time.
+The search feature of the Tokopedia Play  project offers real-time filtering of video content based on user input. As users type in the search bar, the application dynamically filters and displays videos that match the search query in real-time.
 
 1. **Functionality:** As users type in the search bar, the frontend instantly filters and displays videos whose titles include the typed query.
 
