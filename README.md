@@ -1,4 +1,4 @@
-# Tokopedia Play Clone Frontend Code Documentation
+# Tokopedia Play Frontend Code Documentation
 
 ## Helloo
 
