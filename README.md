@@ -112,7 +112,7 @@ src/
 - **Components**: Reusable UI elements that encapsulate specific functionality.
 - **Hooks**: Custom hooks for managing state and fetching data.
 - **Contexts**: Context providers and hooks for sharing data across components.
-- **Pages**: Top-level components that represent different views of the application.
+- **Pages**: Top-level components representing different views of the application.
 
 ## 9. Important Modules and Routes
 
@@ -133,7 +133,7 @@ The comment section of the Tokopedia Play  project leverages Server-Sent Events 
 
 **Real-time Search Feature:**
 
-The search feature of the Tokopedia Play  project offers real-time filtering of video content based on user input. As users type in the search bar, the application dynamically filters and displays videos that match the search query in real-time.
+The Tokopedia Play project's search feature offers real-time video content filtering based on user input. As users type in the search bar, the application dynamically filters and displays videos that match the search query in real-time.
 
 1. **Functionality:** As users type in the search bar, the frontend instantly filters and displays videos whose titles include the typed query.
 
